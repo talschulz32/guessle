@@ -43,11 +43,11 @@ module.exports = {
 
     makeGuess(game, guessWord) {
         if (!dict[game.word.length].includes(guessWord)) {
-            throw new AppError('Sorry, but I don\'t know that word.', 400)
+            throw new AppError('Invalid', 400)
         }
         const prevGuessMatch = game.guesses.map((gameGuess) => gameGuess.map((g) => g.letter).join('')).filter((g) => g === guessWord)
         if (prevGuessMatch.length) {
-            throw new AppError('You already guessed that word!', 400)
+            throw new AppError('Already guessed', 400)
         }
 
         const guess = []
