@@ -15,7 +15,7 @@ let dictionary = null
 
 //------------------ Check for options -------------------- //
 const OPTIONS_KEY = 'guessle-options'
-let blankOptions = JSON.stringify({ dark: false, depth: 2, duplicateLetters: true, wordLength: 5, accessibleMarkers: false, openers: {} })
+let blankOptions = JSON.stringify({ dark: false, depth: 2, duplicateLetters: true, wordLength: 6, accessibleMarkers: false, openers: {} })
 let options = localStorage.getItem(OPTIONS_KEY)
 if (options) {
     try {
